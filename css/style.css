@@ -1,0 +1,269 @@
+@import url(reset.css);
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: url(../img/background/background_main.png) center/cover fixed;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: grayscale(100%) blur(2px);
+  z-index: 10;
+}
+
+.conteiner {
+  width: 1240px;
+  background: url(../img/background/background_main.png) center/cover fixed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.enter_box {
+  width: 496px;
+  margin: 0 0 0 744px;
+  background: rgba(233, 233, 233, 0.25);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 340px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+/* __________________________Switch__________________________ */
+.switch {
+  margin-bottom: 75px;
+}
+.switch > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+
+.switch > input + label {
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  height: 36px;
+  border-radius: 30px;
+  outline: 1px solid #153416;
+  box-shadow: inset 0 0 4px #153416;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.switch > input + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 50%;
+  height: 32px;
+  border-radius: 30px;
+  background: #153416;
+  transition: 0.3s linear;
+}
+
+.switch > input + label span {
+  color: white;
+  position: relative;
+  flex: 1 1 50%;
+}
+
+.switch > input:checked + label::before {
+  transform: translateX(98%);
+  /* left: calc(50% - 2px); */
+}
+
+/* __________________________Вхід__________________________ */
+.switch + p {
+  margin-bottom: 29px;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/* __________________________LOG-IN / REG-IN__________________________ */
+.log_in > input {
+  width: 100%;
+  height: 44px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background: #929191;
+  padding: 15px 20px;
+}
+
+.reg_form input:focus {
+  box-shadow: inset 0 0 4px black;
+}
+
+.reg_form input::placeholder {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.log_in input[type="email"] {
+  margin-bottom: 15px;
+}
+
+.log_in input[type="password"] {
+  margin-bottom: 20px;
+}
+
+.memory_action {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.forgot {
+  color: #153416;
+}
+
+.remember input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.remember input + label {
+  margin: 0 0 0 25px;
+  display: inline-block;
+  padding: 5px;
+  position: relative;
+}
+
+.remember input + label::before {
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  display: inline-block;
+  content: "";
+  border-radius: 2px;
+  border: 1px solid #fff;
+  background-color: #00000000;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.remember input:hover + label::before {
+  border: 1px solid #153416;
+}
+.remember input:checked + label::before {
+  background-color: #153416;
+  border: 1px solid #153416;
+}
+.remember input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -15px;
+  width: 6px;
+  height: 12px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(38deg);
+}
+
+.forgot {
+  padding: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 44px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background: #153416;
+  padding: 15px 20px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+input[type="submit"]:active {
+  box-shadow: inset 0 0 10px #000000;
+  transform: scale(0.99)
+}
+
+input[type="submit"][value="Увійти"] {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.reg_action {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.reg_action p {
+  color: #153416;
+}
+
+.reg_action a {
+  color: #ffffff;
+}
+
+.reg_action + p {
+  margin-bottom: 20px;
+  color: #153416;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social_item {
+  width: 24px;
+  height: 24px;
+}
+
+.social_item a {
+  display: inline-block;
+  line-height: 5px;
+}
+.social_item svg {
+  width: 24px;
+  height: 24px;
+  fill: #153416;
+}
+
+.social .social_item:first-child,
+.social .social_item:first-child a,
+.social .social_item:first-child svg {
+  width: 14px;
+}
