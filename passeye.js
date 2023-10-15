@@ -4,9 +4,19 @@ passWrappers.forEach((block) => {
   const passEye = block.querySelector(".passeye");
   const passwordInput = block.querySelector("input[type='password']");
 
+  passEye.addEventListener("mouseenter", () => {
+    passEye.classList.add("visible");
+  });
+
+  passEye.addEventListener("mouseleave", () => {
+    passEye.classList.remove("visible");
+  });
+
   passEye.addEventListener("click", () => {
-    passEye.classList.toggle("visible");
     passwordInput.type =
       passwordInput.type === "password" ? "text" : "password";
   });
+
 });
+
+  
