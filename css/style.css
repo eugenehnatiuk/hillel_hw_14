@@ -43,6 +43,7 @@ body::before {
   font-size: 12px;
   font-weight: 400;
   line-height: normal;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -110,14 +111,22 @@ body::before {
 }
 
 /* __________________________LOG-IN / REG-IN__________________________ */
-.log_in > input {
+
+.pass_wrapper{
+  position: relative;
+}
+
+.log_in input {
   width: 100%;
   height: 44px;
   outline: none;
   border: none;
   border-radius: 30px;
   background: #929191;
+  color: #fff;
   padding: 15px 20px;
+  margin-bottom: 15px;
+  
 }
 
 .reg_form input:focus {
@@ -126,17 +135,25 @@ body::before {
 
 .reg_form input::placeholder {
   color: #fff;
+  opacity: 70%;
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 400;
 }
 
-.log_in input[type="email"] {
-  margin-bottom: 15px;
+.passeye{
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  stroke: #153416;
+  stroke-width: 1;
 }
 
-.log_in input[type="password"] {
-  margin-bottom: 20px;
+.notHiden{
+  stroke: white;
 }
 
 .memory_action {
@@ -209,16 +226,23 @@ input[type="submit"] {
   margin-bottom: 40px;
 }
 
-input[type="submit"]:active {
-  box-shadow: inset 0 0 10px #000000;
-  transform: scale(0.99)
-}
-
 input[type="submit"][value="Увійти"] {
   color: #fff;
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 400;
+}
+
+input[type="submit"][value="Зареєструватися"] {
+  color: #fff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+}
+
+input[type="submit"]:active {
+  box-shadow: inset 0 0 10px #000000;
+  transform: scale(0.99)
 }
 
 .reg_action {
@@ -267,3 +291,20 @@ input[type="submit"][value="Увійти"] {
 .social .social_item:first-child svg {
   width: 14px;
 }
+
+
+/* ___________ REG FORM_____________________ */
+
+.reg_form{
+  position: relative;
+}
+
+.reg_in_form {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(125%, -50%);
+  transition: transform 0.3s ease; 
+}
+

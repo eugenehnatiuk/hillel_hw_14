@@ -29,6 +29,12 @@
             <path
                 d="M2.72 0C1.218 0 0 1.186 0 2.65c0 1.463 1.218 2.649 2.72 2.649 1.502 0 2.72-1.186 2.72-2.65C5.44 1.186 4.222 0 2.72 0ZM.16 7.48c-.088 0-.16.07-.16.156v16.208c0 .086.072.156.16.156h5.12c.088 0 .16-.07.16-.156V7.636a.158.158 0 0 0-.16-.155H.16ZM8.48 7.48c-.088 0-.16.07-.16.156v16.208c0 .086.072.156.16.156h5.12c.088 0 .16-.07.16-.156v-8.727c0-.62.253-1.215.703-1.653a2.433 2.433 0 0 1 1.697-.685c.637 0 1.247.246 1.697.685.45.438.703 1.033.703 1.653v8.727c0 .086.072.156.16.156h5.12c.088 0 .16-.07.16-.156V13.097c0-3.025-2.702-5.392-5.792-5.118a9.374 9.374 0 0 0-2.776.682l-1.672.698V7.636a.158.158 0 0 0-.16-.155H8.48Z" />
         </symbol>
+        <!-- Password Eye -->
+        <symbol id="passeye" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12.001 5C7.524 5 3.733 7.943 2.46 12c1.274 4.057 5.065 7 9.542 7 4.478 0 8.268-2.943 9.542-7-1.274-4.057-5.064-7-9.542-7Z" />
+        </symbol>
     </svg>
 
     <main>
@@ -46,10 +52,16 @@
                     <div class="reg_form">
                         <form class="log_in_form" action="#">
                             <div class="log_in">
-                                <input type="email" required placeholder="Введіть E-mail" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Введіть E-mail'">
-                                <input type="password" required placeholder="Пароль" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Пароль'">
+                                <input type="email" required placeholder="Введіть E-mail"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введіть E-mail'">
+                                <div class="pass_wrapper">
+                                    <input type="password" required placeholder="Пароль" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Пароль'">
+                                    <svg class="passeye">
+                                        <use href="#passeye"></use>
+                                    </svg>
+                                </div>
+
                             </div>
                             <div class="memory_action">
                                 <div class="remember">
@@ -88,6 +100,56 @@
                                 </li>
                             </ul>
                         </form>
+                        <form class="reg_in_form" action="#">
+                            <div class="log_in">
+                                <input type="email" required placeholder="Введіть E-mail"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Введіть E-mail'">
+                                <div class="pass_wrapper">
+                                    <input type="password" required placeholder="Пароль" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Пароль'">
+                                    <svg class="passeye">
+                                        <use href="#passeye"></use>
+                                    </svg>
+                                </div>
+                                <div class="pass_wrapper">
+                                    <input type="password" required placeholder="Повторіть пароль"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Повторіть пароль'">
+                                    <svg class="passeye">
+                                        <use href="#passeye"></use>
+                                    </svg>
+                                </div>
+
+                            </div>
+                            <input type="submit" value="Зареєструватися">
+                            <div class="reg_action">
+                                <p>Ще немає аккаунту?</p>
+                                <a href="#">Зареєструватися</a>
+                            </div>
+                            <p>Чи увійти через</p>
+                            <ul class="social">
+                                <li class="social_item">
+                                    <a href="#facebook">
+                                        <svg>
+                                            <use href="#facebbok"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social_item">
+                                    <a href="#instagram">
+                                        <svg>
+                                            <use href="#instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social_item">
+                                    <a href="#linkedin">
+                                        <svg>
+                                            <use href="#linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </form>
 
                     </div>
                 </div>
@@ -96,7 +158,8 @@
 
     </main>
 
-
+    <script src="script.js"></script>
+    <script src="passeye.js"></script>
 </body>
 
 </html>
