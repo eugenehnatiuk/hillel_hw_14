@@ -17,7 +17,4 @@ passWrappers.forEach((block) => {
     passwordInput.type =
       passwordInput.type === "password" ? "text" : "password";
   });
-
 });
-
-  
