@@ -1,8 +1,12 @@
+const passWrappers = document.querySelectorAll(".pass_wrapper");
 
-const passeye = document.querySelector(".passeye");
-const passwordInput = document.querySelector("input[type='password']");
+passWrappers.forEach((block) => {
+  const passEye = block.querySelector(".passeye");
+  const passwordInput = block.querySelector("input[type='password']");
 
-passeye.addEventListener("click", () => {
-  passeye.classList.toggle("notHiden");
-  passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+  passEye.addEventListener("click", () => {
+    passEye.classList.toggle("visible");
+    passwordInput.type =
+      passwordInput.type === "password" ? "text" : "password";
+  });
 });
