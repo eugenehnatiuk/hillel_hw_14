@@ -10,6 +10,7 @@ passWrappers.forEach((block) => {
 
   passEye.addEventListener("mouseleave", () => {
     passEye.classList.remove("visible");
+    passwordInput.type = "password";
   });
 
   passEye.addEventListener("click", () => {

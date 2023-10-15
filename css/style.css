@@ -1,5 +1,7 @@
 @import url(reset.css);
 
+
+/* __________________________FONTS__________________________ */
 @font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.woff2") format("woff2");
@@ -8,6 +10,7 @@
   font-display: swap;
 }
 
+/* __________________________BODY__________________________ */
 body {
   background: url(../img/background/background_main.png) center/cover fixed;
 }
@@ -23,6 +26,7 @@ body::before {
   z-index: 10;
 }
 
+/* __________________________REG_BLOCK__________________________ */
 .conteiner {
   width: 1240px;
   background: url(../img/background/background_main.png) center/cover fixed;
@@ -54,7 +58,7 @@ body::before {
   text-align: center;
 }
 
-/* __________________________Switch__________________________ */
+/* __________________________SWITCH__________________________ */
 .switch {
   margin-bottom: 75px;
 }
@@ -102,7 +106,7 @@ body::before {
   /* left: calc(50% - 2px); */
 }
 
-/* __________________________Вхід__________________________ */
+/* __________________________ENTER__________________________ */
 .switch + p {
   margin-bottom: 29px;
   font-family: "Roboto";
@@ -139,17 +143,6 @@ body::before {
   font-size: 12px;
   font-weight: 400;
 }
-/* 
-.passeye{
-  position: absolute;
-  top: 22px;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  stroke: #153416;
-  stroke-width: 1;
-} */
 
 .pass_wrapper svg {
   position: absolute;
@@ -162,10 +155,9 @@ body::before {
   stroke-width: 1;
   cursor: pointer;
 }
-
+/* for JS */
 .visible {
-  stroke: #ffffff !important; 
-
+  stroke: #ffffff !important;
 }
 
 .memory_action {
@@ -236,7 +228,7 @@ input[type="submit"] {
   padding: 15px 20px;
   color: white;
   margin-bottom: 40px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 input[type="submit"][value="Увійти"] {
