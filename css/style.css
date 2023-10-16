@@ -181,17 +181,17 @@ h2 {
   z-index: -1;
 }
 .remember input + label {
-  margin: 0 0 0 25px;
+  /* margin: 0 0 0 25px; */
   display: inline-block;
-  padding: 7px;
+  padding: 0 0 0 25px;
   position: relative;
   cursor: pointer;
 }
 
 .remember input + label::before {
   position: absolute;
-  top: 5px;
-  left: -20px;
+  top: -3px;
+  left: 0;
   display: inline-block;
   content: "";
   border-radius: 2px;
@@ -199,7 +199,6 @@ h2 {
   background-color: #00000000;
   width: 15px;
   height: 15px;
-  cursor: pointer;
 }
 
 .remember input:hover + label::before {
@@ -212,8 +211,8 @@ h2 {
 .remember input:checked + label::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -15px;
+  top: -3px;
+  left: 5px;
   width: 6px;
   height: 12px;
   border-bottom: 2px solid white;
