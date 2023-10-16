@@ -13,6 +13,7 @@
 /* __________________________BODY__________________________ */
 body {
   background: url(../img/background/background_main.png) center/cover fixed;
+ 
 }
 
 body::before {
