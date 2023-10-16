@@ -157,6 +157,7 @@ body::before {
   stroke-width: 1;
   cursor: pointer;
 }
+
 /* for JS */
 .visible {
   stroke: #ffffff !important;

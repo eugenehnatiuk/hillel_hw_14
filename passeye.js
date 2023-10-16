@@ -16,7 +16,7 @@ passWrappers.forEach((block) => {
     passwordVisible = !passwordVisible;
     passwordInput.type = passwordVisible ? "password" : "text";
     passwordInput.style.color = passwordVisible ? "#153416" : "#fff";
-    passEye.classList.add(passwordVisible ? undefined : "visible");
+    passEye.classList.add(passwordVisible ? "" : "visible");
     passwordInput.focus();
   });
 });
