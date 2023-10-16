@@ -183,8 +183,9 @@ h2 {
 .remember input + label {
   margin: 0 0 0 25px;
   display: inline-block;
-  padding: 5px;
+  padding: 7px;
   position: relative;
+  cursor: pointer;
 }
 
 .remember input + label::before {
