@@ -11,49 +11,39 @@
 
 /* __________________________BODY__________________________ */
 body {
-  background: url(../img/background/background_main.png) center/cover fixed;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  backdrop-filter: grayscale(100%) blur(2px);
-  z-index: 10;
-}
-
-/* __________________________REG_BLOCK__________________________ */
-.conteiner {
-  width: 1240px;
-  background: url(../img/background/background_main.png) center/cover fixed;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 20;
-}
-
-.enter_box {
-  width: 496px;
-  margin: 0 0 0 744px;
-  background: rgba(233, 233, 233, 0.25);
-  backdrop-filter: blur(5px);
-  color: #fff;
+  background: url("../img/background/background_main.png") center / cover;
   font-family: "Roboto";
   font-size: 12px;
   font-weight: 400;
-  line-height: normal;
-  overflow: hidden;
 }
 
+/* __________________________REG_BLOCK__________________________ */
 .wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.wrapper::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+ }
+
+.enter_box {
+  width: 496px;
+  background: rgba(233, 233, 233, 0.25);
+  backdrop-filter: blur(5px);
+  color: #fff;
+  overflow: hidden auto;
+  height: 100vh;
+  margin-left: auto;
+}
+
+.conteiner {
   margin: 0 auto;
   max-width: 340px;
   padding-top: 60px;
-  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -61,6 +51,7 @@ body::before {
 .switch {
   margin-bottom: 75px;
 }
+
 .switch > input {
   position: absolute;
   top: 0;
@@ -102,18 +93,30 @@ body::before {
 
 .switch > input:checked + label::before {
   transform: translateX(98%);
-  /* left: calc(50% - 2px); */
 }
 
-/* __________________________ENTER__________________________ */
-.switch + p {
+/* ___________ REG FORM_____________________ */
+
+.reg_form {
+  display: flex;
+  gap: 78px;
+}
+.log_in_form{
+  flex: 0 0 340px;
+}
+.reg_in_form {
+  flex: 0 0 340px;
+  transition: transform 0.3s ease;
+}
+
+/* __________________________LOG-IN / REG-IN__________________________ */
+
+h2 {
   margin-bottom: 29px;
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 400;
 }
-
-/* __________________________LOG-IN / REG-IN__________________________ */
 
 .pass_wrapper {
   position: relative;
@@ -298,19 +301,4 @@ input[type="submit"]:active {
 .social .social_item:first-child a,
 .social .social_item:first-child svg {
   width: 14px;
-}
-
-/* ___________ REG FORM_____________________ */
-
-.reg_form {
-  position: relative;
-}
-
-.reg_in_form {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(125%, -50%);
-  transition: transform 0.3s ease;
 }
