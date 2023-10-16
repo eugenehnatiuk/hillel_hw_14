@@ -1,6 +1,5 @@
 @import url(reset.css);
 
-
 /* __________________________FONTS__________________________ */
 @font-face {
   font-family: "Roboto";
@@ -13,7 +12,6 @@
 /* __________________________BODY__________________________ */
 body {
   background: url(../img/background/background_main.png) center/cover fixed;
- 
 }
 
 body::before {
@@ -128,17 +126,20 @@ body::before {
   border: none;
   border-radius: 30px;
   background: #929191;
-  color: #fff;
+  color: #153416;
   padding: 15px 20px;
   margin-bottom: 15px;
 }
 
+
 .reg_form input:focus {
   box-shadow: inset 0 0 4px black;
 }
-
-.reg_form input::placeholder {
+.log_in input[type='email']{
   color: #fff;
+}
+.reg_form input::placeholder {
+  color: #153416;
   opacity: 70%;
   font-family: "Roboto";
   font-size: 12px;
